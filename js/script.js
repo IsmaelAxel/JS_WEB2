@@ -176,3 +176,8 @@ for (let i = 1; i <= 10; i++) {
     }
 }
 
+
+const numeroMagico  = prompt("decime un numero")
+
+console.log(numeroMagico);
+
