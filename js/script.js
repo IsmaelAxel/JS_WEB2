@@ -48,25 +48,25 @@
 
 
 // if (edad >= 18) {
-    //     console.log("Sos mayor de edad");
-    
-    // } else {
-        //     console.log("Sos menor de edad");
-        
-        // }
-        
-        // if (edad < 18) {
-            //     console.log("No podes ingresar");
-            
-            // } else if(edad === 18){
-                //     console.log("Es tu primera vez, bienvenido");
-                
-                // }else{
-                    //     console.log("Bienvenido");
-                    
-                    // }
-                    
-                    
+//     console.log("Sos mayor de edad");
+
+// } else {
+//     console.log("Sos menor de edad");
+
+// }
+
+// if (edad < 18) {
+//     console.log("No podes ingresar");
+
+// } else if(edad === 18){
+//     console.log("Es tu primera vez, bienvenido");
+
+// }else{
+//     console.log("Bienvenido");
+
+// }
+
+
 // const edad = 22
 // const tieneEntrada = true
 
@@ -106,8 +106,8 @@
 //         break
 //     default:
 //         console.log("Dia no encontrado");
-        
-    
+
+
 // }
 
 // Crear dos variables: tieneUsuario y tieneContrasena.
@@ -123,20 +123,20 @@
 
 // if (tieneContrasena && tieneUsuario) {
 //     console.log("Inicio de sesión correcto");
-    
+
 // } else if(tieneContrasena || tieneUsuario){
 //     console.log("Faltan datos para ingresar");
-    
+
 // }else{
 //     console.log("Complete sus datos");
-    
+
 // }
 
 // for (let i = 1; i <= 5 ; i++) { //condicion del ciclo
 
 //     //    bloque de ejecucion por ciclo
 //     console.log(i);
-    
+
 // }
 
 // console.log(1);
@@ -151,7 +151,7 @@
 
 //     //    bloque de ejecucion por ciclo
 //     console.log(i);
-    
+
 // }
 
 // let i = 1
@@ -169,15 +169,115 @@
 
 // console.log("la suma total es: ", suma);
 
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 1) {
-        console.log(`${i} es impar`);
-        
-    }
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 === 1) {
+//         console.log(`${i} es impar`);
+
+//     }
+// }
+
+
+// const numeroMagico  = prompt("decime un numero")
+
+// console.log(numeroMagico);
+
+//CLASE DE FUNCIONES 
+
+
+
+
+// function saludar(){
+//     console.log("Hola, estudiantes"); //BLOQUE DE CODIGO QUE QUIERA REUTILIZAR
+//     console.log("Bienvenidos a la clase");
+// }
+
+// saludar()
+
+// saludar()
+
+
+// saludar()
+
+
+// saludar()
+
+
+// saludar()
+
+// let pesos = prompt("Dame plata")
+// let dolares = prompt("Dame los verdes")
+
+// function recibirPLata(x, moneda){
+//     let plata = x
+//     console.log(`Tu moned es: ${moneda}, y la cantidad es $${x}`)
+// }
+
+// recibirPLata(pesos, "pesos")
+// recibirPLata(dolares, "dolares")
+
+// function suma(x, y){
+//     return x + y
+// }
+
+// let resultado = suma(10,20)
+
+// console.log(resultado);
+
+//El doble de un numero
+
+// function calcularElDoble(numero){
+//     return numero * 2 
+// }
+
+// console.log(calcularElDoble(2));
+
+//Funcion para determinar si una persona es mayor de edad
+
+// const edad = prompt("Introduci tu edad")
+
+// function mayorDeEdad(){
+//     if(edad >= 18){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+
+// if(mayorDeEdad(edad)){
+//     console.log("Podes conducir")
+// }else{
+//     console.log("No podes conducir");
+// }
+
+//Calculadora
+
+function suma(x, y) {
+    return "La suma de tu operacion es: " + (x + y)
 }
 
+function resta(x, y) {
+    return "La resta de tu operacion es: " + (x - y)
+}
 
-const numeroMagico  = prompt("decime un numero")
+function division(x, y) {
+    return "La divisón de tu operacion es: " + (x / y)
+}
 
-console.log(numeroMagico);
+function multiplicar(x, y) {
+    return "La multiplicación de tu operacion es: " + (x * y)
+}
+
+const operacion = prompt("Introduce una operación: \n Opcion 1: suma \n Opcion 2: resta \n Opcion 3: division \n Opcion 4: mulitplicar")
+const valorA = parseInt(prompt("Introduce tu primer valor"))
+const valorB =  parseInt(prompt("Introduce el segundo valor "))
+
+if (operacion == 1) {
+    console.log(suma(valorA, valorB));
+} else if (operacion == 2) {
+console.log(resta(valorA, valorB))
+} else if (operacion == 3) {
+console.log(division(valorA, valorB))
+} else if (operacion == 4) {
+console.log(multiplicar(valorA, valorB))
+}
 
