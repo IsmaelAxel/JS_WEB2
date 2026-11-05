@@ -500,45 +500,139 @@
 
 //Vamos a crear un pequeño sistema de inventario que permita organizar productos mediante objetos y arrays.
 
-const producto1 = {
+// const producto1 = {
          
-        id: 1,
-        nombre: "Laptop",
-        precio: 1200
+//         id: 1,
+//         nombre: "Laptop",
+//         precio: 1200
     
-};
+// };
 
-const producto2 = {
-   id: 2,
-   nombre: "mouse", 
-   precio: 200
-}
+// const producto2 = {
+//    id: 2,
+//    nombre: "mouse", 
+//    precio: 200
+// }
 
-const inventario = [producto1, producto2]
+// const inventario = [producto1, producto2]
 
-console.log(inventario[0].nombre);
+// console.log(inventario[0].nombre);
 
-const {nombre, precio} = producto1
+// const {nombre, precio} = producto1
 
-console.log(`Producto: ${nombre}`);
+// console.log(`Producto: ${nombre}`);
 
-const producto3 = {
-    id: 3,
-   nombre: "teclado", 
-   precio: 300
-}
+// const producto3 = {
+//     id: 3,
+//    nombre: "teclado", 
+//    precio: 300
+// }
 
-const nuevoInventario = [...inventario, producto3]
+// const nuevoInventario = [...inventario, producto3]
 
-console.log(nuevoInventario);
+// console.log(nuevoInventario);
 
 
-const productoActualizado = {
-    ...producto1,
-    precio: 2000
-}
+// const productoActualizado = {
+//     ...producto1,
+//     precio: 2000
+// }
 
-console.log(productoActualizado);
+// console.log(productoActualizado);
+
+
+//Clase 8: Metodos de Arrays y ls (localstorage)
+
+const frutas = ["Manzana", "Banana", "Naranja"]
+
+//Push
+frutas.push("Frutilla")
+
+// console.log(frutas);
+
+//pop
+
+frutas.pop()
+
+// console.log(frutas);
+
+//unshift
+
+frutas.unshift("Mandarina")
+
+// console.log(frutas);
+
+//map
+
+const numerosA = [1, 2, 3, 4, 5]
+
+const doble = numerosA.map(numero => numero *2)
+
+console.log(doble);
+
+const productos = [
+    {nombre: "laptop", precio: 1000},
+    {nombre: "monitor", precio: 10},
+    {nombre: "teclado", precio: 50},
+    {nombre: "teclado", precio: 100},
+
+]
+
+
+const nombresDeProductos = productos.map(producto =>  `El producto es $${producto.precio}`)
+
+// console.log(nombresDeProductos);
+
+//filter
+
+const numerosB = [10, 20, 3, 40, 5]
+
+const mayoresA15 = numerosB.filter(numero => numero > 15)
+
+// console.log(mayoresA15);
+
+const productosEconomicos = productos.filter(
+    producto => producto.nombre === "teclado"
+)
+
+// console.log(productosEconomicos);
+
+
+// find
+
+const productoEncontrado = productos.find(
+    producto => producto.nombre === "teclado"
+)
+
+// console.log(productoEncontrado);
+
+const productosConNombreEconomico = productos
+    .filter(producto => producto.precio < 100)
+    .map(producto => producto.nombre);
+
+    // console.log(productosConNombreEconomico);
+    
+//LS (LocalStorage)
+
+// localStorage.setItem("nombre", "Ismael")
+
+// const nombreGuardado = localStorage.getItem("nombre")
+
+// console.log(nombreGuardado);
+
+const carrito = [
+    {id: 1, nombre: "Laptop"},
+    {id: 2, nombre: "Mouse"}
+]
+
+localStorage.setItem("carrito", JSON.stringify(carrito))
+
+const carritoGuardado = JSON.parse(
+    localStorage.getItem("carrito")
+)
+
+console.log(carritoGuardado);
+
 
 
 
